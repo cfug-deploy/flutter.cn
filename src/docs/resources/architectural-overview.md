@@ -6,7 +6,7 @@ tags: Flutter参考资料
 keywords: Flutter原理,Flutter架构指南,Flutter分层设计
 ---
 
-<?code-excerpt path-base="../null_safety_examples/resources/architectural_overview/"?>
+<?code-excerpt path-base="resources/architectural_overview/"?>
 
 This article is intended to provide a high-level overview of the architecture of
 Flutter, including the core principles and concepts that form its design.
@@ -416,10 +416,10 @@ efficiently updates the user interface.
 
 Flutter has its own implementations of each UI control, rather than deferring to
 those provided by the system: for example, there is a pure [Dart
-implementation]({{site.api}}/flutter/material/Switch-class.html) of both the
+implementation]({{site.api}}/flutter/cupertino/CupertinoSwitch-class.html) of both the
 [iOS Switch
 control](https://developer.apple.com/design/human-interface-guidelines/ios/controls/switches/)
-and the [one for](https://material.io/develop/android/components/switches) the
+and the [one for]({{site.api}}/flutter/material/Switch-class.html) the
 [Android equivalent](https://material.io/develop/android/components/switches).
 
 Flutter 拥有其自己的 UI 控制实现，而不是由系统自带的方法进行托管：
