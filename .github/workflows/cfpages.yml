@@ -1,0 +1,17 @@
+name: Deploy Site
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Put steps here to build, and check your site.
+
+    - name: Clear Cloudflare cache
+      uses: Cyb3r-Jak3/actions-cloudflare-pages@<Latest Release>
+      with:
+        account: ${{ secrets.CLOUDFLARE_ZONE }}
+        project: ${{ secrets.CLOUDFLARE_PROJECT }}
+        email: ${{ secrets.CLOUDFLARE_EMAIL }}
+        global_token: ${{ secrets.CLOUDFLARE_KEY }}
